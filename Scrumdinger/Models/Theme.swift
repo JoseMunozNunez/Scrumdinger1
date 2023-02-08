@@ -13,27 +13,33 @@ enum Theme: String{
     case bubblegum
     case buttercup
     case indigo
-    case lavender
+    case lavanda
     case magenta
     case navy
-    case orange
+    case naranjo
     case oxblood
     case periwinkle
-    case poppy
-    case purple
+    case amapola
+    case morado
     case seafoam
     case sky
     case tan
     case teal
-    case yellow
+    case amarillo
     
     var accentColor: Color {
             switch self {
-            case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
-            case .indigo, .magenta, .navy, .oxblood, .purple: return .white
+            case .bubblegum, .buttercup, .lavanda, .naranjo, .periwinkle, .amapola, .seafoam, .sky, .tan, .teal, .amarillo: return .black
+            case .indigo, .magenta, .navy, .oxblood, .morado: return .white
             }
+        
         }
     var mainColor: Color {
         Color(rawValue)
     }
+    
+    var name: String {
+        rawValue.capitalized
+    }
+    
 }
