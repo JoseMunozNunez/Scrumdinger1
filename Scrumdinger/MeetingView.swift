@@ -13,12 +13,12 @@ struct MeetingView: View {
             ProgressView( value: 5, total: 15)
             HStack {
                 VStack (alignment:  .leading) {
-                    Text("Seconds Elapsed").font(.caption)
+                    Text("Segundos Trascurridos").font(.caption)
                     Label("300", systemImage: "hourglass.bottomhalf.fill")
                 }
                 Spacer()
                 VStack (alignment:  .trailing) {
-                    Text("Seconds Remaining").font(.caption)
+                    Text("Segundos Restantes").font(.caption)
                     Label("600", systemImage: "hourglass.bottomhalf.fill")
                 }
             }
@@ -28,7 +28,7 @@ struct MeetingView: View {
             
             Circle().strokeBorder(lineWidth: 24)
             HStack{
-                Text("Speaker 1 of 3")
+                Text("Usuario 1 de 3")
                 Spacer()
                 Button(action: { } )  {
                     Image(systemName: "forward.fill")

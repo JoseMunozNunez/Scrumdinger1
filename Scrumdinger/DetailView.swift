@@ -27,7 +27,7 @@ struct DetailView: View {
                 HStack{
                     Label("Equipo",systemImage: "paintpalette")
                     Spacer()
-                    Text(scrum.theme.name).padding(4).cornerRadius(4)
+                    Text(scrum.theme.name).padding(4).foregroundColor(scrum.theme.mainColor).background(scrum.theme.mainColor).cornerRadius(4)
                 }
                 .accessibilityElement(children: .combine)
             }
@@ -41,10 +41,12 @@ struct DetailView: View {
         .navigationTitle(scrum.title)
     }
 }
+
+
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-                   DetailView(scrum: DailyScrum.sampleData[0])
+            DetailView(scrum: DailyScrum.sampleData[0])
        }
     }
 }
